@@ -3,8 +3,13 @@ import ChatBot from 'react-simple-chatbot';
 
 const steps=[
   {
+    id: '0',
+    message: 'Hello there!👋',
+    trigger: '1',
+  },
+  {
     id: '1',
-    message: 'Hello there!',
+    message: "I'm Tommy Bot,your smart assistant.",
     trigger: '2',
   },
   {
@@ -45,6 +50,27 @@ const steps=[
   {
     id: '9',
     message: 'Awesome! You are a telepath!',
+    trigger: '10',
+  },{
+    id: '9',
+    message: 'Awesome! You are a telepath!',
+    trigger: '10',
+  },{
+    id: '10',
+    message: "Please Rate! How you Enjoy!🤩",
+    trigger: '11',
+  },
+  {
+    id: '11',
+    options: [
+      { value: 1, label: 'Poor', trigger: '12' },
+      { value: 2, label: 'Good', trigger: '12' },
+      { value: 3, label: 'Excellent', trigger: '12' },
+    ],
+  },
+  {
+    id: '12',
+    message: 'Thanks! Have a Great Day!😇',
     end: true,
   },
 ];
@@ -55,13 +81,13 @@ function App() {
         <center> 
           <h1>Hey there! Welcome to ChatBot.</h1>
           <p>I'm Abhi Varde.Here to Help😊!</p>
-          <ChatBot 
-            steps={steps}
-          />
+            <ChatBot 
+              headerTitle = "Tommy Bot"
+              steps={steps}
+            />
         </center>
     </div>
   );
 }
  
 export default App;
-
